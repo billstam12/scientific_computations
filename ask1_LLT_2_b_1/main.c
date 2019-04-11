@@ -6,35 +6,31 @@
 
 int main(void){
 
-    //Select method of solving
-    //int selected = read_method();
-    //if(selected == 1){
-    //	printf("LU Decomposition\n");
-    //}else if(selected == 2){
-        printf("Cholesky LL^T Decomposition\n");
-    //}
+    printf("Cholesky LL^T Decomposition\n");
 
     //Select method of reading matrices
-    int na, nb;
+    int size_a, size_b;
     int flag=0, option;
 
-    char *filename1=malloc(100*sizeof(char));
-    read_matrix_dimensions(&na, 'A', &option, filename1);
-    double **A=malloc(na*sizeof(double*));
-    for(int i=0; i<na; i++){
-	A[i] = malloc(na*sizeof(double));
+    char *filename1=malloc(100 * sizeof(char));
+    printf("Give matrix dimension:\n>");
+    scanf("%d", &size_a);
+    printf("\n");
+    long double **A=malloc(size_a * sizeof(long double*));
+    for(int i=0; i < size_a; i++){
+       A[i] = malloc(size_a * sizeof(long double));
     }
-	//printf("MAIN: %s\n",filename1);
-    fill_matrix(A, na, option, 'A', filename1);
+    
+    pascal_matrix(A, size_a);
 
     free(filename1);
     filename1=NULL;
 
+    cholesky_decomposition(A, size_a);
 
-    cholesky_decomposition(A, na);
-
-    for(int i=0; i<na; i++)
-	free(A[i]);
+    for(int i=0; i < size_a; i++){
+       free(A[i]);
+    }
     free(A);
 
     return 0;

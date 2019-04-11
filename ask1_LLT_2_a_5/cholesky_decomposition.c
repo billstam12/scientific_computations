@@ -1,3 +1,7 @@
+/* 
+  Vasileios Stamatopoulos 
+  1115201400188
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "cholesky_decomposition.h"
@@ -7,9 +11,9 @@
 void cholesky_decomposition(long double **A, int size_a){
 
     // Initialize L with size_a*size_a
-    long double **L = malloc(size_a * sizeof(double*));
+    long double **L = malloc(size_a * sizeof(long double*));
     for(int i = 0; i < size_a; i++){
-       L[i] = malloc(size_a * sizeof(double));
+       L[i] = malloc(size_a * sizeof(long double));
     }
 
     //Make L a zero matrix
@@ -50,7 +54,7 @@ void cholesky_decomposition(long double **A, int size_a){
     print_matrix(L_transpose, size_a);
 
 
-    printf("\nThe determinant of L is : %.2lf\n", get_determinant(L, size_a, size_a));
+    printf("\nThe determinant of L is : %.2Lf\n", get_determinant(L, size_a, size_a));
     long double **inverseL = get_inverse(L, size_a);
     
     
@@ -58,7 +62,7 @@ void cholesky_decomposition(long double **A, int size_a){
     print_matrix(L, size_a);
 
 
-    printf("\nnThe determinant of L Transpose is: %.2lf\n", get_determinant(L_transpose, size_a, size_a));
+    printf("\nnThe determinant of L Transpose is: %.2Lf\n", get_determinant(L_transpose, size_a, size_a));
     long double **inverseLT = get_inverse(L, size_a);
     
     printf("\nInverse L Transpose:\n");

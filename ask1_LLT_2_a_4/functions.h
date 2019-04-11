@@ -1,3 +1,7 @@
+/* 
+  Vasileios Stamatopoulos 
+  1115201400188
+*/
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 

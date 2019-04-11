@@ -1,9 +1,9 @@
 #ifndef READMATRIX_H
 #define READMATRIX_H
 
-void read_user_input(double **arr, int n, int m, char c);
-void create_random(double **arr, int n, int m, char c);
-void read_file_matrix_dims(int *n, char *filename);
-void read_matrix_from_file(double **arr, int n, int m, char c,  char *filename);
+void read_user_input(long double **, int , int , char );
+void create_random(long double **, int , int , char );
+void read_file_matrix_dims(int *, char *);
+void read_matrix_from_file(long double **, int, int, char ,  char *);
 
 #endif

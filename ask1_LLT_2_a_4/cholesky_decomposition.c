@@ -1,3 +1,7 @@
+/* 
+  Vasileios Stamatopoulos 
+  1115201400188
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "cholesky_decomposition.h"

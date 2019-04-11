@@ -1,6 +1,6 @@
 #ifndef CHOLESKY_DECOMPOSITION
 #define CHOLESKY_DECOMPOSITION
 
-void cholesky_decomposition(double **A, int na);
+void cholesky_decomposition(long double **, int );
 
 #endif

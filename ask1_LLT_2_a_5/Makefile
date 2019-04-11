@@ -2,10 +2,10 @@ CC=gcc
 
 CFLAGS= -c -I.
 
-all: ergasia1
+all: erotima_a_5
 
-ergasia1: main.o functions.o readmatrix.o cholesky_decomposition.o
-	$(CC) -o ergasia1 main.o functions.o readmatrix.o cholesky_decomposition.o -lm
+erotima_a_5: main.o functions.o readmatrix.o cholesky_decomposition.o
+	$(CC) -o erotima_a_5 main.o functions.o readmatrix.o cholesky_decomposition.o -lm
 
 main.o: main.c
 	$(CC) $(CFLAGS) main.c
@@ -20,4 +20,4 @@ cholesky_decomposition.o: cholesky_decomposition.c
 	$(CC) $(CFLAGS) cholesky_decomposition.c -lm
 
 clean:
-	rm -f *.o ergasia1
+	rm -f *.o erotima_a_5
