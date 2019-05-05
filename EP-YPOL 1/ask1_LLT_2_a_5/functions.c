@@ -58,14 +58,14 @@ void read_matrix_dimensions(int *n, char c, int *option, char *filename){
 void PascalMatrix(long double **ar, int n){
 
     for(int i=0; i<n; i++){
-	for(int j=0; j<n; j++){
-	    long double top, bot1, bot2;
-	    top = factorial(i+j);
-	    bot1 = factorial(i);
-	    bot2 = factorial(j);
+    	for(int j=0; j<n; j++){
+    	    long double top, bot1, bot2;
+    	    top = factorial(i+j);
+    	    bot1 = factorial(i);
+    	    bot2 = factorial(j);
 
-	    ar[i][j] = top/(bot1*bot2);
-	}
+    	    ar[i][j] = top/(bot1*bot2);
+    	}
     }
 
     printf("MATRIX A:\n");

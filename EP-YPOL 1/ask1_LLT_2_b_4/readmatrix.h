@@ -1,3 +1,7 @@
+/* 
+  Vasileios Stamatopoulos 
+  1115201400188
+*/
 #ifndef READMATRIX_H
 #define READMATRIX_H
 
